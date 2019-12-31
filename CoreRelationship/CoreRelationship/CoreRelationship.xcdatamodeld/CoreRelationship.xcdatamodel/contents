@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19C57" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Contact" representedClassName="Contact" syncable="YES" codeGenerationType="class">
+        <attribute name="mobileNumber" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="personal" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Personal" inverseName="contact" inverseEntity="Personal"/>
+    </entity>
+    <entity name="Personal" representedClassName="Personal" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="contact" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Contact" inverseName="personal" inverseEntity="Contact"/>
+    </entity>
+    <elements>
+        <element name="Personal" positionX="-63" positionY="-18" width="128" height="73"/>
+        <element name="Contact" positionX="-54" positionY="0" width="128" height="73"/>
+    </elements>
+</model>
